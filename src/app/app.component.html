@@ -1,0 +1,30 @@
+<pip-root-layout>
+  <pip-sidenav-floating style="height: 100%">
+    <pip-nav-header></pip-nav-header>
+    <pip-nav-menu></pip-nav-menu>
+  </pip-sidenav-floating>
+  <pip-root-content>
+    <pip-appbar>
+      <pip-picture backgroundColor="transparent" src="./assets/logo_small.svg"></pip-picture>
+      <div fxFlex></div>
+      <pip-primary-actions></pip-primary-actions>
+      <a mat-button href="https://github.com/pip-webui2">
+        <pip-picture backgroundColor="transparent" src="./assets/github.svg"></pip-picture>
+        <span class="text">GitHub</span>
+      </a>
+    </pip-appbar>
+    <pip-main-layout>
+      <pip-sidenav-fixed>
+        <pip-nav-header></pip-nav-header>
+        <pip-sidenav-expander></pip-sidenav-expander>
+        <pip-nav-menu></pip-nav-menu>
+      </pip-sidenav-fixed>
+      <pip-main-content>
+        <pip-shadow visible="true" attachmentSide="top"></pip-shadow>
+        <pip-shadow visible="true" attachmentSide="left"></pip-shadow>
+        <pip-shadow visible="true" attachmentSide="right"></pip-shadow>
+        <router-outlet></router-outlet>
+      </pip-main-content>
+    </pip-main-layout>
+  </pip-root-content>
+</pip-root-layout>

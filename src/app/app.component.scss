@@ -1,0 +1,23 @@
+::ng-deep {
+    pip-root-content {
+        pip-appbar {
+            a {
+                color: inherit;
+            }
+            pip-picture {
+                
+            }
+            .mat-button {
+                pip-picture {
+                    height: 26px;
+                    width: 26px;
+                    margin-right: 4px;
+                }
+                .text {
+                    margin-top: 2px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

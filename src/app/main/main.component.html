@@ -1,0 +1,36 @@
+<pip-scrollable fxFlex="fill">
+    <pip-scrollable-content>
+        <div class="main-block" fxLayout="column" fxLayoutAlign="center center">
+            <img src="../assets/LogoWebUI.svg">
+            <p class="text">
+                HTML5 UI Framework for Line-of-Business Applications
+            </p>
+            <a href="https://github.com/pip-webui2/pip-webui2" mat-raised-button color="accent">Get started</a>
+        </div>
+        <div class="purpouse">
+            <p class="purpouse-text">
+                The framework is based on popular
+                <a href="https://angular.io/">Angular framework</a> and
+                <a href="https://material.angular.io">Angular Material library</a> of web controls. On the top of that Pip.WebUI provides a set of modules targeted
+                toward LOB application development.
+            </p>
+        </div>
+
+        <div class="components-container">
+            <pip-tiles-layout columnWidth="140" [stretch]="mainMedia.isMainActive('lt-md')">
+                <mat-toolbar>
+                    Components
+                </mat-toolbar>
+                <div class="pip-tile" *ngFor="let tile of tiles" fxLayout="column" fxLayoutAlign="center center">
+                    <mat-icon [ngClass]="tile.colorClass">{{ tile.icon }}</mat-icon>
+                    {{ tile.title }}
+                </div>
+            </pip-tiles-layout>
+        </div>
+        <mat-toolbar class="footer" color="primary" fxLayout="row" fxLayoutAlign="center center">
+            <pip-picture backgroundColor="transparent" src="../assets/LogoWebUI.svg"></pip-picture>
+            <div fxFlex></div>
+            <span>(c) Conceptual Vision Consulting LLC</span>
+        </mat-toolbar>
+    </pip-scrollable-content>
+</pip-scrollable>

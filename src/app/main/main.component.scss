@@ -1,0 +1,192 @@
+@import '~@angular/material/theming';
+@import '~pip-webui2-themes/src/styles.scss';
+@include mat-core();
+@mixin document-mixin($theme) {
+    $primary: map-get($theme, primary);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+     :host .main-block {
+        background: mat-color($primary); // background: -moz-linear-gradient(top,mat-color($primary) 0,mat-color($primary, 0.92) 27%,mat-color($primary) 77%,mat-color($primary) 100%);
+        // background: -webkit-linear-gradient(top,mat-color($primary) 0,mat-color($primary) 27%,mat-color($primary) 77%,mat-color($primary) 100%);
+        //background: linear-gradient(to bottom,mat-color($primary, 0.85) 0,mat-color($primary, 0.88) 27%,mat-color($primary, 0.92) 77%,mat-color($primary, 1) 100%);
+    }
+
+    :host .purpouse {
+        background: mat-color($foreground, divider);
+        a {
+            color: mat-color($foreground, text);
+        }
+    }
+}
+
+.unicorn-dark-theme {
+    @include document-mixin($dark-theme);
+}
+
+.candy-theme {
+    @include document-mixin($candy-app-theme);
+}
+
+.pip-blue-theme {
+    @include document-mixin($pip-blue-theme);
+}
+
+.pip-grey-theme {
+    @include document-mixin($pip-grey-theme);
+}
+
+.pip-navy-theme {
+    @include document-mixin($pip-navy-theme);
+}
+
+.pip-amber-theme {
+    @include document-mixin($pip-amber-theme);
+}
+
+.pip-green-theme {
+    @include document-mixin($pip-green-theme);
+}
+
+.pip-orange-theme {
+    @include document-mixin($pip-orange-theme);
+}
+
+.pip-pink-theme {
+    @include document-mixin($pip-pink-theme);
+}
+
+.pip-dark-theme {
+    @include document-mixin($pip-dark-theme);
+}
+
+.pip-black-theme {
+    @include document-mixin($pip-black-theme);
+}
+
+.bootbarn-warm-theme {
+    @include document-mixin($bootbarn-warm-theme);
+}
+
+.bootbarn-cool-theme {
+    @include document-mixin($bootbarn-cool-theme);
+}
+
+.bootbarn-mono-theme {
+    @include document-mixin($bootbarn-mono-theme);
+}
+
+::ng-deep main {
+    .main-block {
+        height: 486px;
+        img {
+            max-width: calc(100% - 48px);
+        }
+        p.text {
+            font-family: Roboto;
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            color: #fff;
+            max-width: 400px;
+            margin-bottom: 64px;
+        }
+    }
+    .purpouse {
+        padding: 72px 24px;
+        width: 100%;
+        box-sizing: border-box;
+        .purpouse-text {
+            font-family: Roboto;
+            max-width: 700px;
+            margin: 0px auto 13px;
+            padding: 19px 0px 0px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0px;
+        }
+    }
+    .pip-tiles-layout .pip-tiles-content {
+        margin-top: 56px;
+
+        mat-toolbar {
+            padding-left: 8px;
+            position: absolute;
+            margin-top: -60px;
+            background-color: transparent;
+        }
+    }
+
+    .pip-tile {
+        width: 140px;
+        height: 140px;
+        cursor: pointer;
+        mat-icon {
+            height: 40px;
+            width: 40px;
+            font-size: 40px;
+            margin-bottom: 4px;
+            &.color1 {
+                color: #67bc6b;
+            }
+            &.color2 {
+                color: #f37047;
+            }
+            &.color3 {
+                color: #46b2e6;
+            }
+            &.color4 {
+                color: #ffcc2a;
+            }
+            &.color5 {
+                color: #b06cac;
+            }
+        }
+    }
+
+    .components-container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer {
+        pip-picture {
+           width: 87px;
+           height: 20px;
+        }
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+::ng-deep .pip-lt-md {
+    main {
+        .main-block {
+            height: 300px;
+            p.text {
+                font-size: 23px;
+                color: #fff;
+                max-width: 300px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .purpouse {
+            padding: 24px 16px;
+            .purpouse-text {
+                max-width: 320px;
+                margin: 0px auto 8px;
+                padding: 8px 0px 0px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        .pip-tile {
+            height: 72px;
+        }
+    }
+}
