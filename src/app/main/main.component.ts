@@ -29,7 +29,7 @@ export class MainComponent {
   constructor(
     private sidenav: PipSidenavService,
     private rightnav: PipRightnavService,
-    private mainMedia: PipMediaService,
+    public mainMedia: PipMediaService,
     private themesService: PipThemesService,
     private partService: PipPartService
   ) {
