@@ -23,6 +23,7 @@ export class AppComponent {
     media.activate();
     this.sidenav.active = false;
     this.primaryActions.actions = [];
+    this.themesService.selectedTheme = this.themesService.selectedTheme || this.themesService.themes[4];
     this.generatePrimaryActions();
     this.navService.showPrimaryActions(this.primaryActions);
   }
